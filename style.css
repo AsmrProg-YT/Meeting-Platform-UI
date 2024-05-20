@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+body{
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar{
+    background: #f8fafc;
+    width: 5%;
+    height: 93%;
+    position: fixed;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.sidebar .nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar .nav .item i{
+    font-size: 25px;
+    color: #b9bec6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav .item.active i,
+.sidebar .nav .item i:hover{
+    color: #1263dd;
+}
+
+.main{
+    margin-left: 96px;
+    background: #f8fafc;
+    width: 65%;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main .header{
+    margin-bottom: 20px;
+}
+
+.main .header h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.main .header .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .header .info .details{
+    display: flex;
+    gap: 20px;
+}
+
+.main .header .info .details p{
+    font-size: 14px;
+    color: #818a98;
+}
+
+.main .header .info .details .time{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.main .header .info .details .time i{
+    color: #66bb6a;
+}
+
+.main .header .info a{
+    text-decoration: none;
+    color: #1263dd;
+    background: #fff;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.main .header .info a:hover{
+    box-shadow: none;
+}
+
+.main .call .host{
+    position: relative;
+}
+
+.main .call .host img{
+    width: 100%;
+    height: 470px;
+    border-radius: 20px;
+}
+
+.main .call .host .tag,
+.main .call .clients .item .tag{
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.main .call .clients{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main .call .clients .item{
+    width: 20%;
+    position: relative;
+}
+
+.main .call .clients img{
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.main .call .clients .item .tag{
+    font-size: 11px;
+    bottom: 12px;
+    left: 33%;
+}
+
+.main .controls{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.main .controls i{
+    font-size: 24px;
+    color: #67707e;
+    background: #fff;
+    border-radius: 50%;
+    padding: 12px 13px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main .controls button{
+    font-size: 15px;
+    border: none;
+    background: #eb3d4b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .controls i.red{
+    color: #fff;
+    background: #eb3d4b;
+    transition: all 0.3s ease;
+}
+
+.main .controls button:hover,
+.main .controls i.red:hover{
+    background: #ec0918;
+}
+
+.right-section{
+    width: 30%;
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section > h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right-section > p{
+    font-size: 12px;
+    text-align: center;
+    color: #818a98;
+}
+
+.right-section .messages{
+    margin: 30px 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 78%;
+}
+
+.right-section .messages .item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-section .messages .item .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.right-section .messages .item .info h5{
+    color: #1263dd;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.right-section .messages .item .info p{
+    color: #b9bec6;
+    font-size: 11px;
+}
+
+.right-section .messages .item img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.right-section .messages .item .text{
+    width: 100%;
+    background: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.right-section .messages .item .text > p{
+    font-size: 13px;
+}
+
+.right-section .send{
+    background: #fff;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.right-section .send input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.right-section .send i{
+    font-size: 26px;
+    color: #fff;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right-section .send i.stickerIcon{
+    background: #e2a60e;
+}
+
+.right-section .send i.sendIcon{
+    background: #1263dd;
+    font-size: 22px;
+    padding: 6px;
+}
+
+@media screen and (max-width: 1330px) {
+    
+    .main{
+        margin-left: 86px;
+    }
+
+    .right-section .messages .item{
+        gap: 10px;
+    }
+
+    .right-section .messages .item img{
+        width: 48px;
+        height: 48px;
+    }
+
+    .right-section .messages .item .text > p{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .sidebar .nav{
+        flex-direction: row;
+    }
+
+    .main{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .right-section{
+        width: 100%;
+    }
+
+    .right-section .messages{
+        margin-bottom: 40px;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .main .header h3{
+        margin-bottom: 20px;
+    }
+
+    .main .header .info a{
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+
+    .main .header .info .details p{
+        font-size: 13px;
+    }
+
+    .main .call .clients .item .tag{
+        display: none;
+    }
+
+}
